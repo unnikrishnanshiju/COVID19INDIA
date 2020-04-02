@@ -14,13 +14,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class fetchData extends AsyncTask<Void,Void,Void> {
+public class fetchData extends AsyncTask<Void,Void,String> {
     String data = "";
-    FetchDataCallbackInterface fetchDataCallbackInterface;
     MainActivity m = new MainActivity();
     String singleParsed;
     @Override
-    protected Void doInBackground(Void... voids) {
+    protected String doInBackground(Void... voids) {
         try {
             URL url = new URL("https://api.rootnet.in/covid19-in/stats/latest");
             HttpURLConnection httpURLConnection =(HttpURLConnection) url.openConnection();
@@ -32,34 +31,21 @@ public class fetchData extends AsyncTask<Void,Void,Void> {
                 data = data + line;
 
             }
-            JSONObject root = new JSONObject(data);
-            JSONObject resultData = root.getJSONObject("data");
-            JSONArray dataRegional = resultData.getJSONArray("regional");
-            for(int i = 0 ;i<dataRegional.length();i++){
-                JSONObject jo = (JSONObject) dataRegional.get(i);
-                singleParsed = jo.get("loc")+"\n"
-                            +jo.get("confirmedCasesIndian")+"\n";
-            }
-            //m.tv.setText(singleParsed);
+
+
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
         }
-        return null;
+        return data;
     }
 
     @Override
-    protected void onPostExecute(Void aVoid) {
+    protected void onPostExecute(String aVoid) {
         super.onPostExecute(aVoid);
-       /* try {
-            m.tabData(data);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }*/
+
 
     }
 }
