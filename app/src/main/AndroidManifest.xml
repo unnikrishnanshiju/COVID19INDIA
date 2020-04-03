@@ -3,19 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dreamsdoor.co.in.tableviewexample">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HelpfulLinks"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
+            tools:ignore="LockedOrientationActivity"/>
         <activity android:name=".About"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"></activity>
+            tools:ignore="LockedOrientationActivity"/>
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape"
@@ -28,6 +30,6 @@
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
 </manifest>
