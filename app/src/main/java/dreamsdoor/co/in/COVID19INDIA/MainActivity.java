@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity  {
             e.printStackTrace();
         }
         tabView = (TableView<String[]>) findViewById(R.id.tabView);
-        tabView.setHeaderBackgroundColor(Color.parseColor("#6200EE"));
+        tabView.setHeaderBackgroundColor(Color.parseColor("#808c8e"));
         tabView.setHeaderAdapter(new SimpleTableHeaderAdapter(this,headerTabs));
         tabView.setDataAdapter(new SimpleTableDataAdapter(this,dataFromTab));
         tabView.setColumnCount(5);
