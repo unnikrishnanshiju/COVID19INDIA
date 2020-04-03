@@ -1,4 +1,4 @@
-package dreamsdoor.co.in.tableviewexample;
+package dreamsdoor.co.in.COVID19INDIA;
 
 import androidx.appcompat.app.AppCompatActivity;
 import de.codecrafters.tableview.TableView;
@@ -8,11 +8,8 @@ import de.codecrafters.tableview.toolkit.SimpleTableHeaderAdapter;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;

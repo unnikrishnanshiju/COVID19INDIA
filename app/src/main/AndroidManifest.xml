@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="dreamsdoor.co.in.tableviewexample">
+    package="dreamsdoor.co.in.COVID19INDIA">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,14 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HelpfulLinks"
+        <activity android:name="dreamsdoor.co.in.COVID19INDIA.HelpfulLinks"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
-        <activity android:name=".About"
+        <activity android:name="dreamsdoor.co.in.COVID19INDIA.About"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name="dreamsdoor.co.in.COVID19INDIA.MainActivity"
             android:screenOrientation="landscape"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>

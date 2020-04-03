@@ -1,4 +1,4 @@
-package dreamsdoor.co.in.tableviewexample;
+package dreamsdoor.co.in.COVID19INDIA;
 
 import android.content.Context;
 
