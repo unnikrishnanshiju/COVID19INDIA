@@ -5,19 +5,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
+
+    <TextView
+        android:id="@+id/lastUp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center|center_vertical|center_horizontal"
+        android:text="LAST UPDATED : "
+        android:textColor="#05f746"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+    <TextView
+        android:id="@+id/confirmed"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="CONFIRMED : "
+        android:textColor="#BFFF0000"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingRight="10dp"
+        />
+    <TextView
+        android:id="@+id/discharged"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:textColor="#05f746"
+        android:text="DISCHARGED : "
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/deceased"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="DECEASED : "
+        android:textColor="#2e2828"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+ </LinearLayout>
 
     <de.codecrafters.tableview.TableView
         android:id="@+id/tabView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+         />
 
 
 

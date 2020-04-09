@@ -14,14 +14,11 @@
         android:theme="@style/AppTheme">
         <activity android:name="dreamsdoor.co.in.COVID19INDIA.HelpfulLinks"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            tools:ignore="LockedOrientationActivity" />
         <activity android:name="dreamsdoor.co.in.COVID19INDIA.About"
-            android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
+            />
         <activity
-            android:name="dreamsdoor.co.in.COVID19INDIA.MainActivity"
-            android:screenOrientation="landscape"
-            tools:ignore="LockedOrientationActivity">
+            android:name="dreamsdoor.co.in.COVID19INDIA.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
