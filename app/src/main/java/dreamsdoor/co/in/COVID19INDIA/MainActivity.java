@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -26,6 +28,7 @@ import org.json.JSONObject;
 import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity  {
+    private FirebaseAnalytics mFirebaseAnalytics;
     String[][] dataFromTab;
     static String[] headerTabsPortrait = {"STATE/UT","C","A","R", "D"};
     static String[] headerTabsLandscape = {"STATE/UT","CONFIRMED","ACTIVE","RECOVERED", "DECEASED"};
@@ -37,19 +40,21 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         cnf = findViewById(R.id.confirmed);
         lu = findViewById(R.id.lastUp);
         dis = findViewById(R.id.discharged);
         dea = findViewById(R.id.deceased);
         tabView = (TableView<String[]>) findViewById(R.id.tabView);
         tabView.setHeaderBackgroundColor(Color.parseColor("#808c8e"));
+        tabView.setColumnWeight(0,2);
         tabView.setColumnCount(5);
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            tabView.setColumnWeight(0,2);
             tabView.setHeaderAdapter(new SimpleTableHeaderAdapter(this,headerTabsLandscape));
         } else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-            tabView.setColumnWeight(0,2);
             tabView.setHeaderAdapter(new SimpleTableHeaderAdapter(this,headerTabsPortrait));
         }
 
@@ -59,8 +64,6 @@ public class MainActivity extends AppCompatActivity  {
             String maindata = process.get();
             remainingData(maindata);
             tabularData(maindata);
-
-
         } catch (ExecutionException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -87,6 +90,11 @@ public class MainActivity extends AppCompatActivity  {
                 String data =  process.get();
                 tabularData(data);
                 remainingData(data);
+                Bundle bundle = new Bundle();
+                bundle.putString(FirebaseAnalytics.Param.ITEM_ID, String.valueOf(item.getItemId()));
+                bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, String.valueOf(item.getTitle()));
+                bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image");
+                mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle);
             } catch (ExecutionException e) {
                 e.printStackTrace();
             } catch (InterruptedException e) {

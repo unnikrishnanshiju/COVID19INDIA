@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "713098422016",
+    "firebase_url": "https://covid19india-95ed4.firebaseio.com",
+    "project_id": "covid19india-95ed4",
+    "storage_bucket": "covid19india-95ed4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713098422016:android:421fb86326b0c8b6bd35e5",
+        "android_client_info": {
+          "package_name": "in.co.dreamsdoor.COVID19INDIA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713098422016-h1aputl0vkgfmeeit4coqgb1l3k7fkur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.co.dreamsdoor.COVID19INDIA",
+            "certificate_hash": "7a6a8a8f761ee28967fde659ff3f8e3d0ee9d404"
+          }
+        },
+        {
+          "client_id": "713098422016-s5ohqj17d08cbp6pvv4osgeh2g8plc15.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWqrfmoUtcH3u6fojpEUe4cUYtH6OqvAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713098422016-s5ohqj17d08cbp6pvv4osgeh2g8plc15.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

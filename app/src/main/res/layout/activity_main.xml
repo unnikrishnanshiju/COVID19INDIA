@@ -48,19 +48,18 @@
         android:paddingRight="10dp"
         />
 
-    <TextView
-        android:id="@+id/deceased"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:text="DECEASED : "
-        android:textColor="#2e2828"
-        android:textSize="18dp"
-        android:textStyle="bold"
-        />
+        <TextView
+            android:id="@+id/deceased"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="DECEASED : "
+            android:textColor="#2e2828"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
- </LinearLayout>
+    </LinearLayout>
 
     <de.codecrafters.tableview.TableView
         android:id="@+id/tabView"
